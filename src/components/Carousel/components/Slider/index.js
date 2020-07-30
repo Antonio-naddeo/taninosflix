@@ -39,11 +39,11 @@ export const SliderItem = styled.li`
 `;
 
 
-const Slider = ({ children }) => (
+const Slider = ({ children,items }) => (
   <Container>
     <SlickSlider {...{
       dots: false,
-      infinite: false,
+      infinite: items>6 || (window.innerWidth<=500 && items>=3),
       speed: 300,
       centerMode: false,
       variableWidth: true,

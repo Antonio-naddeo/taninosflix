@@ -25,7 +25,7 @@ function Carousel({
           }
         </>
       )}
-      <Slider>
+      <Slider items={videos.length}>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
