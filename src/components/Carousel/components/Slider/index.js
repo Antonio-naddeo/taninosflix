@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React,{Component} from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
@@ -38,8 +38,7 @@ export const SliderItem = styled.li`
   }
 `;
 
-
-const Slider = ({ children,items }) => (
+const Slider = ({ children, items }) => (
   <Container>
     <SlickSlider {...{
       dots: false,
@@ -48,11 +47,88 @@ const Slider = ({ children,items }) => (
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            infinite: false,
+          }
+        },
+        {
+          breakpoint: 100,
+          settings: {
+            infinite: false,
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            infinite: false,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings:{
+            infinite: false,
+          }},
+
+      ]
     }}
     >
       {children}
     </SlickSlider>
   </Container>
 );
+// class Slider extends Component {
+//   constructor({children,items}){
+//     super();
+//     this.items=items;
+//     this.children=children
+//   }
+
+
+//   render() {
+//     var settings = {
+//       dots: false,
+//       infinite: false,
+//       speed: 300,
+//       centerMode: false,
+//       variableWidth: true,
+//       adaptiveHeight: true,
+//       responsive: [
+//         {
+//           breakpoint: 500,
+//           settings: {
+//             infinite: this.items>3,
+//           }
+//         },
+//         {
+//           breakpoint: 750,
+//           settings: {
+//             infinite: this.items>4,
+//           }
+//         },
+//         {
+//           breakpoint: 1000,
+//           settings: {
+//             infinite: this.items>5,
+//           }
+//         },
+//         {
+//           breakpoint: 1250,
+//           settings:{
+//             infinite: this.items>6,
+//           }},
+//       ]
+//     };
+//     return (
+//       <Container>
+//     <SlickSlider {...settings}>
+//     {this.children}
+//         </SlickSlider>
+//       </Container>
+//     );
+//   }
+// }
 
 export default Slider; 
