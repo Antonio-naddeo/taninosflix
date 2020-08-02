@@ -1,0 +1,16 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Tanin Awards",
+            "descricao": "So os topzera de acordo com eu mesmo",
+            "cor": "#cbd1ff"
+        },
+        {
+            "id": 1,
+            "nome": "Games Top",
+            "descricao": "So os joguinho topzera",
+            "cor": "#cbd1ff"
+        }
+    ]
+}

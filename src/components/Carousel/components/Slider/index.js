@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
@@ -42,37 +42,38 @@ const Slider = ({ children, items }) => (
   <Container>
     <SlickSlider {...{
       dots: false,
-      infinite: items>6 || (window.innerWidth<=500 && items>=3),
+      infinite: items >= 6 || (window.innerWidth <= 500 && items >= 3),
       speed: 300,
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
       responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: 400,
           settings: {
-            infinite: false,
-          }
+            infinite: items >= 2,
+          },
         },
         {
-          breakpoint: 100,
+          breakpoint: 650,
           settings: {
-            infinite: false,
-          }
+            infinite: items >= 3,
+          },
         },
         {
-          breakpoint: 750,
+          breakpoint: 900,
           settings: {
-            infinite: false,
-          }
+            infinite: items >= 4,
+          },
         },
         {
-          breakpoint: 500,
-          settings:{
-            infinite: false,
-          }},
+          breakpoint: 1100,
+          settings: {
+            infinite: items >= 5,
+          },
+        },
 
-      ]
+      ],
     }}
     >
       {children}
@@ -85,7 +86,6 @@ const Slider = ({ children, items }) => (
 //     this.items=items;
 //     this.children=children
 //   }
-
 
 //   render() {
 //     var settings = {
@@ -131,4 +131,4 @@ const Slider = ({ children, items }) => (
 //   }
 // }
 
-export default Slider; 
+export default Slider;
