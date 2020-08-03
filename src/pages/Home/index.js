@@ -6,18 +6,39 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import categoriasRepository from '../../repositories/categorias';
 import PageDefaut from '../../components/PageDefault';
-
+import aluraRepository from '../../repositories/alura';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
+  function AgruparBDAlura(categoriasBD, formacoes) {
+    const dadosAgrupados = [
+      ...categoriasBD,
+      {
+        nome: 'Formações Alura',
+        descricao: 'Aqui voce encontra todas as formações ofertadadas pela queridissima Alura',
+        id: 5000,
+        cor: '#2a7ae4',
+        link_extra: {
+          text: 'Aqui voce encontra todas as formações ofertadadas pela queridissima Alura',
+          url: 'https://www.alura.com.br/formacoes',
+        },
+        videos: formacoes,
+      },
+    ];
+    return dadosAgrupados;
+  }
+
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
-      .then((categoriasComVideos) => {
-        setDadosIniciais(categoriasComVideos);
+      .then(async (categoriasComVideos) => {
+        const formacoes = await aluraRepository.getCursosAlura();
+        const categoriasBdEAlura = AgruparBDAlura(categoriasComVideos, formacoes);
+        setDadosIniciais(categoriasBdEAlura);
+        console.log(categoriasBdEAlura);
       })
       .catch((err) => {
-        console.log(err.message);
+        console.log(`----${err.message}`);
       });
   }, []);
 
@@ -26,6 +47,7 @@ function Home() {
 
       {dadosIniciais.length === 0 && (<div>Carregando ...</div>)}
       {dadosIniciais.map((categoria, indice) => {
+        //console.log(categoria);
         if (indice === 0) {
           return (
             <div key={categoria.id}>

@@ -12,6 +12,7 @@ function Carousel({
   const categoryExtraLink = category.link_extra;
   const categoryDescription = category.descricao;
   const { videos } = category;
+ 
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -32,12 +33,13 @@ function Carousel({
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
-
+          console.log(video.urlImage);
           return (
             <SliderItem key={video.titulo}>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
+                ImageURL={(video.urlImage != undefined) ? video.urlImage : video.url}
                 categoryColor={categoryColor}
               />
             </SliderItem>
