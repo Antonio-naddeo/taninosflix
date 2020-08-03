@@ -4,6 +4,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -31,8 +32,7 @@ function CadastroCategoria() {
   return (
     <PageDefault>
       <h1>
-        Cadastro de Categoria
-        {values.nome}
+        Cadastro de Categoria:
       </h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
@@ -41,6 +41,17 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
+
+        categoriasRepository.createCategory({
+          nome: values.nome,
+          descricao: values.descricao,
+          cor: values.cor,
+          link_extra: {
+            text: '',
+            url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          },
+        });
+
         clearForm(valoresIniciais);
       }}
       >
