@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
@@ -30,6 +30,9 @@ const Container = styled.ul`
 
 export const SliderItem = styled.li`
   margin-right: 16px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding-right:5px;
   img {
     margin: 16px;
     width: 298px;

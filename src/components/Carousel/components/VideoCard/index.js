@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { VideoCardContainer } from './styles';
+import { VideoCardContainer, VideoCardTitulo } from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -8,7 +9,6 @@ function getYouTubeId(youtubeURL) {
       '$7',
     );
 }
-
 
 function VideoCard({ videoTitle, videoURL, categoryColor }) {
   const image = `https://img.youtube.com/vi/${getYouTubeId(videoURL)}/hqdefault.jpg`;
@@ -19,7 +19,9 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       target="_blank"
       style={{ borderColor: categoryColor || 'red' }}
       title={videoTitle}
-    />
+    >
+      <VideoCardTitulo>Video</VideoCardTitulo>
+    </VideoCardContainer>
   );
 }
 
