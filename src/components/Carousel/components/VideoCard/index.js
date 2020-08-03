@@ -20,7 +20,7 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       style={{ borderColor: categoryColor || 'red' }}
       title={videoTitle}
     >
-      <VideoCardTitulo>Video</VideoCardTitulo>
+      <VideoCardTitulo>{videoTitle}</VideoCardTitulo>
     </VideoCardContainer>
   );
 }

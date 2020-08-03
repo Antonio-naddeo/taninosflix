@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const VideoCardTitulo = styled.a`
+export const VideoCardTitulo = styled.p`
     font-style: normal;
     font-weight: bold;
-    font-size: 25px;
-    color:black;
+    font-size: 20px;
+    color:#cbd1ff;
     opacity: 0;
 `;
 
