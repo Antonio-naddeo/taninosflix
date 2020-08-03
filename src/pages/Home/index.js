@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-// import dadosIniciais from '../../data/dados_iniciais.json';
+import { videoBanner } from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import categoriasRepository from '../../repositories/categorias';
@@ -13,7 +13,6 @@ function Home() {
 
   function AgruparBDAlura(categoriasBD, formacoes) {
     const dadosAgrupados = [
-      ...categoriasBD,
       {
         nome: 'Formações Alura',
         descricao: 'Aqui voce encontra todas as formações ofertadadas pela queridissima Alura',
@@ -25,6 +24,7 @@ function Home() {
         },
         videos: formacoes,
       },
+      ...categoriasBD,
     ];
     return dadosAgrupados;
   }
@@ -52,13 +52,13 @@ function Home() {
           return (
             <div key={categoria.id}>
               <BannerMain
-                videoTitle={dadosIniciais[0].videos[0].titulo}
-                url={dadosIniciais[0].videos[0].url}
-                videoDescription="a musica é massa, mas o video clipe é sensacional com algumas jogadas de câmera"
+                videoTitle={videoBanner.titulo}
+                url={videoBanner.url}
+                urlImage={videoBanner.urlImage}
+                videoDescription="video secreto do Dev Soutinho com os desafio prontos"
               />
 
               <Carousel
-                ignoreFirstVideo
                 category={dadosIniciais[0]}
               />
             </div>

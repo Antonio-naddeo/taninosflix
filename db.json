@@ -7,7 +7,7 @@
       "cor": "#cbf1ff",
       "link_extra": {
         "text": "So os topzera de acordo com eu mesmo",
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        "url": "https://www.youtube.com/watch?v=0JgF4CMXU9M"
       }
     },
     {
@@ -26,17 +26,17 @@
       "cor": "#0a0943",
       "link_extra": {
         "text": "",
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        "url": "https://www.youtube.com/watch?v=0JgF4CMXU9M"
       },
       "id": 3
     }
   ],
   "videos": [
     {
-      "id": 1,
+      "titulo": "Echoes ",
+      "url": "https://www.youtube.com/watch?v=53N99Nim6WE",
       "categoriaId": 1,
-      "titulo": "Kendrick Lamar - HUMBLE.",
-      "url": "https://www.youtube.com/watch?v=tvTRZJ-4EyI"
+      "id": 12
     },
     {
       "id": 2,
@@ -69,10 +69,10 @@
       "url": "https://www.youtube.com/watch?v=c0i88t0Kacs"
     },
     {
-      "titulo": "Echoes ",
-      "url": "https://www.youtube.com/watch?v=53N99Nim6WE",
+      "id": 1,
       "categoriaId": 1,
-      "id": 12
+      "titulo": "Kendrick Lamar - HUMBLE.",
+      "url": "https://www.youtube.com/watch?v=tvTRZJ-4EyI"
     },
     {
       "titulo": "Miike Snow - Paddling Out",
