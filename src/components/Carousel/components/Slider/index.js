@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { Component } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
@@ -38,97 +38,67 @@ export const SliderItem = styled.li`
   }
 `;
 
-const Slider = ({ children, items }) => (
-  <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: items >= 6 || (window.innerWidth <= 500 && items >= 3),
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-      responsive: [
-        {
-          breakpoint: 400,
-          settings: {
-            infinite: items >= 2,
-          },
-        },
-        {
-          breakpoint: 650,
-          settings: {
-            infinite: items >= 3,
-          },
-        },
-        {
-          breakpoint: 900,
-          settings: {
-            infinite: items >= 4,
-          },
-        },
-        {
-          breakpoint: 1100,
-          settings: {
-            infinite: items >= 5,
-          },
-        },
+const Slider = ({ children, items }) => {
+  const SliderRef = React.createRef();
+  // eslint-disable-next-line max-len
+  useLayoutEffect(() => { // retorna o slide para a primeira posição se houver resize, para que nao ocorra de sumir a seta e videos ficaream fora do Carousel
+    function updateSize() {
+      SliderRef.current.slickGoTo(0);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
-      ],
-    }}
-    >
-      {children}
-    </SlickSlider>
-  </Container>
-);
-// class Slider extends Component {
-//   constructor({children,items}){
-//     super();
-//     this.items=items;
-//     this.children=children
-//   }
+  return (
+    <Container>
+      <SlickSlider
+        ref={SliderRef}
+        {...{
+          dots: false,
+          infinite: items >= 6,
+          speed: 300,
+          centerMode: false,
+          variableWidth: true,
+          adaptiveHeight: true,
+          arrows: items >= 6,
+          responsive: [
+            {
+              breakpoint: 700,
+              settings: {
+                infinite: items >= 2,
+                arrows: items >= 2,
+              },
+            },
+            {
+              breakpoint: 1010,
+              settings: {
+                infinite: items >= 3,
+                arrows: items >= 3,
+              },
+            },
+            {
+              breakpoint: 1320,
+              settings: {
+                infinite: items >= 4,
+                arrows: items >= 4,
+              },
+            },
+            {
+              breakpoint: 1630,
+              settings: {
+                infinite: items >= 5,
+                arrows: items >= 5,
+              },
+            },
 
-//   render() {
-//     var settings = {
-//       dots: false,
-//       infinite: false,
-//       speed: 300,
-//       centerMode: false,
-//       variableWidth: true,
-//       adaptiveHeight: true,
-//       responsive: [
-//         {
-//           breakpoint: 500,
-//           settings: {
-//             infinite: this.items>3,
-//           }
-//         },
-//         {
-//           breakpoint: 750,
-//           settings: {
-//             infinite: this.items>4,
-//           }
-//         },
-//         {
-//           breakpoint: 1000,
-//           settings: {
-//             infinite: this.items>5,
-//           }
-//         },
-//         {
-//           breakpoint: 1250,
-//           settings:{
-//             infinite: this.items>6,
-//           }},
-//       ]
-//     };
-//     return (
-//       <Container>
-//     <SlickSlider {...settings}>
-//     {this.children}
-//         </SlickSlider>
-//       </Container>
-//     );
-//   }
-// }
+          ],
+        }}
+      >
+        {children}
+      </SlickSlider>
+    </Container>
+  );
+};
 
 export default Slider;
