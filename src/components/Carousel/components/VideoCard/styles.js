@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const VideoCardTitulo = styled.p`
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
-    color:#cbd1ff;
+    font-size: 22px;
+    color:#2a7ae4;
     opacity: 0;
 `;
 
