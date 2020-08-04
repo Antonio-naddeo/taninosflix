@@ -29,3 +29,14 @@ export const ImageFrame = styled.img`
   width: 100%;
   height: 100%;
 `;
+
+export const LogoFrame = styled.img`
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 22%;
+  height: 22%;
+`;
