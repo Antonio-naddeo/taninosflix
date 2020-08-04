@@ -43,6 +43,7 @@ function Carousel({
                 videoURL={video.url}
                 ImageURL={(video.urlImage != undefined) ? video.urlImage : video.url}
                 categoryColor={categoryColor}
+                videoId={video.id}
               />
             </SliderItem>
           );
