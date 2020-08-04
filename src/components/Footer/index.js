@@ -11,7 +11,11 @@ function Footer() {
         Orgulhosamente criado durante a
         {' '}
         <a href="https://www.alura.com.br/">
-          Imersão React da Alura
+          Imersão React da Alura 
+        </a>
+        &nbsp;por&nbsp;
+        <a href="https://github.com/Antonio-naddeo">
+           Taninos(ou eu mesmo)
         </a>
       </p>
     </FooterBase>
