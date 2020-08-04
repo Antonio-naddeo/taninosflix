@@ -28,7 +28,7 @@ ContentAreaContainer.Category = styled.h1`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 100px;
   line-height: 70px;
   display: flex;
   align-items: center;
@@ -46,6 +46,7 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+  font-size: 25px;
   @media (max-width: 800px) {
     display: none;
   }
@@ -54,13 +55,13 @@ ContentAreaContainer.Description = styled.p`
 ContentAreaContainer.Title = styled.h2`
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
 
   @media (max-width: 800px) {
-    font-size: 32px;
+    font-size: 50px;
     text-align: center;
   }
 `;

@@ -12,17 +12,19 @@ function Carousel({
   const categoryExtraLink = category.link_extra;
   const categoryDescription = category.descricao;
   const { videos } = category;
- 
+
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
-            {categoryTitle}
-          </Title>
+          <a href={categoryExtraLink.url} target="_blank" rel="noreferrer">
+            <Title style={{ backgroundColor: categoryColor || 'red' }}>
+              {categoryTitle}
+            </Title>
+          </a>
           {categoryExtraLink
             && (
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
+            <ExtraLink>
               {categoryDescription}
             </ExtraLink>
             )}

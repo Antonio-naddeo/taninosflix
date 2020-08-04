@@ -11,6 +11,10 @@ export const Title = styled.h3`
   background: red;
   line-height: 1;
   border-radius: 4px;
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
 
   @media (max-width: 800px) {
     font-size: 18px;
@@ -18,16 +22,13 @@ export const Title = styled.h3`
   }
 `;
 
-export const ExtraLink = styled.a`
+export const ExtraLink = styled.h4`
   margin-left: 16px;
   text-decoration: none;
   transition: opacity .3s;
-  &:hover,
-  &:focus {
-    opacity: .5;
-  }
+  display: inline-block;
   @media (max-width: 800px) {
-    display: block;
+    display: inline-block;
     margin-bottom: 16px;
     margin-left: 0;
   }
