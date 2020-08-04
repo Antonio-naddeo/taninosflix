@@ -16,9 +16,11 @@ const Loading = ({ type, color }) => (
 
 const carregando = styled.div`
   align-content:center;
-  vertical-align:center;
-  width:100%;
-  height:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  width:50%;
+  height:50%;
 `;
 
 function Home() {
