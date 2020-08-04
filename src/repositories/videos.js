@@ -21,6 +21,26 @@ function create(objDoVideo) {
     });
 }
 
+function destroy(id) {
+  // eslint-disable-next-line no-console
+  console.log(config.URL_BACKEND);
+  return fetch(`${URL_VIDEOS}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+    },
+  })
+    .then(async (response) => {
+      if (response.ok) {
+        const resposta = await response.json();
+        return resposta;
+      }
+
+      throw new Error('Não foi possível conectar ao servidor');
+    });
+}
+
 export default {
   create,
+  destroy,
 };

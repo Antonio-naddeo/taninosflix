@@ -5,6 +5,7 @@ import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
+import config from '../../../config';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -17,9 +18,7 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    const URL_TOP = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'http://localhost:8080/categorias';
+    const URL_TOP = `${config.URL_BACKEND}/categorias`;
     fetch(URL_TOP)
       .then(async (response) => {
         const resposta = await response.json();
