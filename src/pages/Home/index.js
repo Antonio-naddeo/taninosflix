@@ -1,12 +1,27 @@
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { videoBanner } from '../../data/dados_iniciais.json';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import categoriasRepository from '../../repositories/categorias';
 import PageDefaut from '../../components/PageDefault';
 import aluraRepository from '../../repositories/alura';
+import ReactLoading from 'react-loading';
+
+const Loading = ({ type, color }) => (
+  <ReactLoading type={type} color={color} height={375} width={375} />
+);
+
+const carregando = styled.div`
+  align-content:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  width:50%;
+  height:50%;
+`;
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -45,7 +60,7 @@ function Home() {
   return (
     <PageDefaut paddingAll={0}>
 
-      {dadosIniciais.length === 0 && (<div>Carregando ...</div>)}
+      {dadosIniciais.length === 0 && (<carregando><Loading type="spinningBubbles" color="#2a7ae4" /></carregando>)}
       {dadosIniciais.map((categoria, indice) => {
         //console.log(categoria);
         if (indice === 0) {
