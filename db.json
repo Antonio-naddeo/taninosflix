@@ -29,25 +29,9 @@
         "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       },
       "id": 3
-    },
-    {
-      "nome": "asd",
-      "descricao": "sadsads",
-      "cor": "#a11b1b",
-      "link_extra": {
-        "text": "",
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      },
-      "id": 4
     }
   ],
   "videos": [
-    {
-      "titulo": "Echoes ",
-      "url": "https://www.youtube.com/watch?v=53N99Nim6WE",
-      "categoriaId": 1,
-      "id": 12
-    },
     {
       "id": 2,
       "categoriaId": 1,
@@ -61,10 +45,106 @@
       "url": "https://www.youtube.com/watch?v=zw47_q9wbBE"
     },
     {
-      "id": 6,
-      "categoriaId": 2,
+      "titulo": "OS FLASHBACKS DA VILA DA FOLHA (VOICE MAKERS)",
+      "url": "https://www.youtube.com/watch?v=3fX_qeK4P2w&t",
+      "categoriaId": 1,
+      "id": 13
+    },
+    {
+      "titulo": "Zelda x Ghibli Film Trailer",
+      "url": "https://www.youtube.com/watch?v=Wxav9Jj7R68&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=273&t=0s",
+      "categoriaId": 1,
+      "id": 14
+    },
+    {
+      "titulo": "Tua máscara caiu, Batman!",
+      "url": "https://www.youtube.com/watch?v=e1nAzIIdX2U&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=31&t=0s",
+      "categoriaId": 1,
+      "id": 15
+    },
+    {
+      "titulo": "O valor da amizade",
+      "url": "https://www.youtube.com/watch?v=MsbnXVPIhmw&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=48&t=0s",
+      "categoriaId": 1,
+      "id": 16
+    },
+    {
+      "titulo": "O SUMIDÃO DO HOKAGE 2.0 (VOICE MAKERS)",
+      "url": "https://www.youtube.com/watch?v=JsSTL_loeRw",
+      "categoriaId": 1,
+      "id": 17
+    },
+    {
+      "titulo": "Pega a tampa em Japonês",
+      "url": "https://www.youtube.com/watch?v=E3BJuXA1eGU&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=18&t=0s",
+      "categoriaId": 1,
+      "id": 18
+    },
+    {
+      "titulo": "O Ovo - Um Conto",
+      "url": "https://www.youtube.com/watch?v=h6fcK_fRYaI",
+      "categoriaId": 1,
+      "id": 19
+    },
+    {
       "titulo": "The Witcher 3: Wild Hunt",
-      "url": "https://www.youtube.com/watch?v=c0i88t0Kacs"
+      "url": "https://www.youtube.com/watch?v=c0i88t0Kacs&t=1s",
+      "categoriaId": 2,
+      "id": 20
+    },
+    {
+      "titulo": "Broforce",
+      "url": "https://www.youtube.com/watch?v=8mOAQ7t9JjY",
+      "categoriaId": 2,
+      "id": 21
+    },
+    {
+      "titulo": "Red Dead Redemption 2",
+      "url": "https://www.youtube.com/watch?v=eaW0tYpxyp0&t",
+      "categoriaId": 2,
+      "id": 22
+    },
+    {
+      "titulo": "Legend of Zelda Ocarina of Time",
+      "url": "https://www.youtube.com/watch?v=_NElFLzgdUs",
+      "categoriaId": 2,
+      "id": 23
+    },
+    {
+      "titulo": "EMINEM - Rap God (WAY TOO SLOW COVER)",
+      "url": "https://www.youtube.com/watch?v=T-4qEGYOqLg&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=106&t=0s",
+      "categoriaId": 3,
+      "id": 24
+    },
+    {
+      "titulo": "Rat Attack - O cantarolar da justiça",
+      "url": "https://www.youtube.com/watch?v=0qvOImHWne8&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=114&t=0s",
+      "categoriaId": 3,
+      "id": 25
+    },
+    {
+      "titulo": "J. R. R. Tolkien vs George R. R. Martin.",
+      "url": "https://www.youtube.com/watch?v=XAAp_luluo0",
+      "categoriaId": 3,
+      "id": 26
+    },
+    {
+      "titulo": "Echoes",
+      "url": "https://www.youtube.com/watch?v=53N99Nim6WE",
+      "categoriaId": 3,
+      "id": 27
+    },
+    {
+      "titulo": "Kendrick Lamar - HUMBLE.",
+      "url": "https://www.youtube.com/watch?v=tvTRZJ-4EyI",
+      "categoriaId": 3,
+      "id": 28
+    },
+    {
+      "titulo": "Spell It Out",
+      "url": "https://www.youtube.com/watch?v=Nr9y40F3qu4&list=LLXYOIDdN6GbY2gh5rFHzFUg&index=189",
+      "categoriaId": 3,
+      "id": 29
     }
   ]
 }

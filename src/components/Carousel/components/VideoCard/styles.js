@@ -4,7 +4,7 @@ export const VideoCardTitulo = styled.p`
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
-    text-shadow: black 0.2em 0.2em 0.2em;
+    text-shadow: rgba(0,0,0,1) 0.2em 0.2em 0.2em;
     color:#2a7ae4;
     opacity: 0;
 `;

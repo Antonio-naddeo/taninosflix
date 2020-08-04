@@ -22,8 +22,7 @@ function create(objDoVideo) {
 }
 
 function destroy(id) {
-  // eslint-disable-next-line no-console
-  console.log(config.URL_BACKEND);
+
   return fetch(`${URL_VIDEOS}/${id}`, {
     method: 'DELETE',
     headers: {
@@ -33,6 +32,7 @@ function destroy(id) {
     .then(async (response) => {
       if (response.ok) {
         const resposta = await response.json();
+        console.log(resposta);
         return resposta;
       }
 
