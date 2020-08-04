@@ -2,7 +2,7 @@
   "videoBanner":{
     "titulo": "O melhor video do Mundo",
     "url": "https://www.youtube.com/watch?v=0JgF4CMXU9M",
-    "urlImage":"https://i.ytimg.com/vi/HGrXz6vHngI/hqdefault.jpg",
+    "urlImage":"https://i.ytimg.com/vi/HGrXz6vHngI/maxresdefault.jpg",
     "categoriaId": 1,
     "id": 9999
   },

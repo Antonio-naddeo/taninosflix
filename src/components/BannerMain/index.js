@@ -36,6 +36,7 @@ export default function BannerMain({
           <VideoIframeResponsive
             youtubeID={youTubeID}
             urlNovaAba={url}
+            urlImage={urlImage}
           />
           <WatchButton>
             Assistir

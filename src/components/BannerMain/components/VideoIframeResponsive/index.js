@@ -4,7 +4,7 @@ import {
   VideoContainer, ResponsiveIframe, ImageFrame, LogoFrame,
 } from './styles';
 
-function YouTubeIframeResponsive({ youtubeID, urlNovaAba }) {
+function YouTubeIframeResponsive({ youtubeID, urlNovaAba, urlImage }) {
   const imageRef = React.createRef();
   const logoRef = React.createRef();
   const videoRef = React.createRef();
@@ -30,7 +30,7 @@ function YouTubeIframeResponsive({ youtubeID, urlNovaAba }) {
         ref={videoRef}
       />
       <a href={urlNovaAba} rel="noreferrer" target="_blank">
-        <ImageFrame src="https://i.ytimg.com/vi/HGrXz6vHngI/hqdefault.jpg" ref={imageRef} onClick={(event) => rodarVideo(event)} />
+        <ImageFrame src={urlImage} ref={imageRef} onClick={(event) => rodarVideo(event)} />
       </a>
       <a href={urlNovaAba} rel="noreferrer" target="_blank">
         <LogoFrame src="http://pngimg.com/uploads/youtube/youtube_PNG15.png" ref={logoRef} onClick={(event) => rodarVideo(event)} />
