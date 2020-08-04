@@ -45,5 +45,38 @@ export const VideoCardContainer = styled.a`
   }
 `;
 
+export const DeleteLogoContainer = styled.button`
+  border: 2px solid;
+  border-radius: 4px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background-image: ${({ urlImageDelete }) => `url(${urlImageDelete})`};
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  top: 5px;
+  right:5px;
+  opacity: 0.5;
+  transition: opacity .3s;
+  transition: transform .5s;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    background-color:gray
+    transform: scale(1.10);
+    ${VideoCardTitulo}{
+      transition: opacity 0.3s;
+      opacity: 1;
+    }
+  }
+  
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+`;
 
 // export default { VideoCardContainer, VideoCardTitulo };
